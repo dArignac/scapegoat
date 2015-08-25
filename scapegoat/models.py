@@ -35,7 +35,7 @@ class Task(models.Model):
     due_date = models.DateTimeField(null=True, blank=True, verbose_name=gettext('Due date'))
     category = models.ForeignKey(Category)
     parent = models.ForeignKey('self', null=True, blank=True, verbose_name=gettext('Parent task'))
-    tags = models.ManyToManyField(Tag, null=True, blank=True)
+    tags = models.ManyToManyField(Tag, blank=True)
 
     def __str__(self):
         return 'Task: {}'.format(self.title)
