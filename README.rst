@@ -1,5 +1,5 @@
 =============================
-scaepgoat
+scapegoat
 =============================
 
 .. image:: https://travis-ci.org/dArignac/scapegoat.png?branch=master
