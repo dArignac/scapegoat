@@ -1,6 +1,6 @@
-=============================
+=========
 scapegoat
-=============================
+=========
 
 .. image:: https://travis-ci.org/dArignac/scapegoat.png?branch=master
     :target: https://travis-ci.org/dArignac/scapegoat
