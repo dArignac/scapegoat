@@ -31,6 +31,7 @@ class Tag(models.Model):
 
 class Task(models.Model):
     title = models.CharField(max_length=255, verbose_name=gettext('Title'))
+    url = models.URLField(verbose_name=gettext('URL'), null=True, blank=True)
     is_important = models.BooleanField(default=False, verbose_name=gettext('Important?'))
     due_date = models.DateTimeField(null=True, blank=True, verbose_name=gettext('Due date'))
     category = models.ForeignKey(Category)

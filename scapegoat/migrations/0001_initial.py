@@ -13,8 +13,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Category',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
-                ('title', models.CharField(max_length=255, verbose_name='Title')),
+                ('id', models.AutoField(verbose_name='ID', auto_created=True, serialize=False, primary_key=True)),
+                ('title', models.CharField(verbose_name='Title', max_length=255)),
             ],
             options={
                 'verbose_name': 'Category',
@@ -25,8 +25,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Tag',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
-                ('title', models.CharField(max_length=255, verbose_name='Title')),
+                ('id', models.AutoField(verbose_name='ID', auto_created=True, serialize=False, primary_key=True)),
+                ('title', models.CharField(verbose_name='Title', max_length=255)),
             ],
             options={
                 'verbose_name': 'Tag',
@@ -37,12 +37,13 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Task',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
-                ('title', models.CharField(max_length=255, verbose_name='Title')),
+                ('id', models.AutoField(verbose_name='ID', auto_created=True, serialize=False, primary_key=True)),
+                ('title', models.CharField(verbose_name='Title', max_length=255)),
+                ('url', models.URLField(verbose_name='URL', null=True, blank=True)),
                 ('is_important', models.BooleanField(verbose_name='Important?', default=False)),
-                ('due_date', models.DateTimeField(verbose_name='Due date', blank=True, null=True)),
+                ('due_date', models.DateTimeField(verbose_name='Due date', null=True, blank=True)),
                 ('category', models.ForeignKey(to='scapegoat.Category')),
-                ('parent', models.ForeignKey(to='scapegoat.Task', null=True, blank=True, verbose_name='Parent task')),
+                ('parent', models.ForeignKey(verbose_name='Parent task', to='scapegoat.Task', null=True, blank=True)),
                 ('tags', models.ManyToManyField(to='scapegoat.Tag', blank=True)),
             ],
             options={
