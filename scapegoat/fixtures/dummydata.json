@@ -1,0 +1,98 @@
+[
+{
+    "pk": 1,
+    "fields": {
+        "title": "Demo Cat 1"
+    },
+    "model": "scapegoat.category"
+},
+{
+    "pk": 1,
+    "fields": {
+        "title": "Tag 1"
+    },
+    "model": "scapegoat.tag"
+},
+{
+    "pk": 2,
+    "fields": {
+        "title": "Tag 2"
+    },
+    "model": "scapegoat.tag"
+},
+{
+    "pk": 1,
+    "fields": {
+        "title": "Parent 1 (Important)",
+        "category": 1,
+        "due_date": null,
+        "parent": null,
+        "is_important": true,
+        "tags": [
+            1,
+            2
+        ],
+        "url": ""
+    },
+    "model": "scapegoat.task"
+},
+{
+    "pk": 2,
+    "fields": {
+        "title": "Parent 2 (Url, Due)",
+        "category": 1,
+        "due_date": "2016-11-01T13:36:13Z",
+        "parent": null,
+        "is_important": false,
+        "tags": [
+            2
+        ],
+        "url": "http://www.google.com"
+    },
+    "model": "scapegoat.task"
+},
+{
+    "pk": 3,
+    "fields": {
+        "title": "Child 1.1",
+        "category": 1,
+        "due_date": null,
+        "parent": 1,
+        "is_important": false,
+        "tags": [
+            1,
+            2
+        ],
+        "url": ""
+    },
+    "model": "scapegoat.task"
+},
+{
+    "pk": 4,
+    "fields": {
+        "title": "Child 1.2",
+        "category": 1,
+        "due_date": null,
+        "parent": 1,
+        "is_important": false,
+        "tags": [],
+        "url": ""
+    },
+    "model": "scapegoat.task"
+},
+{
+    "pk": 5,
+    "fields": {
+        "title": "Child 2.1 (Important, Due)",
+        "category": 1,
+        "due_date": "2016-04-15T13:37:14Z",
+        "parent": 2,
+        "is_important": true,
+        "tags": [
+            2
+        ],
+        "url": ""
+    },
+    "model": "scapegoat.task"
+}
+]
