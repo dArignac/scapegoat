@@ -40,7 +40,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'Django',
-        'bootstrap3',
+        'django-bootstrap3',
     ],
     license='MIT',
     zip_safe=False,
