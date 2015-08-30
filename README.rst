@@ -26,9 +26,13 @@ Install scapegoat::
 
     pip install scapegoat
 
-Then use it in a project::
+To use it, add the scapegoat url and navigate to there. Scapegoat is standalone.::
 
-    import scapegoat
+    urlpatterns = [
+        ...
+        url(r'^', include('scapegoat.urls')),
+        ...
+    ]
 
 Features
 --------
